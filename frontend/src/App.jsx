@@ -19,11 +19,13 @@ function App() {
     // </div>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Navigate to= '/register' />} />  {/* Redirect root to /register */}
+        <Route path='/' element={ <Navigate to= '/register' /> } />  {/* Redirect root to /register */}
 
         <Route path='/register' element={ <Register /> } />  {/* http://localhost:5173/register */}
         <Route path='/login' element={ <Login /> } />
         <Route path='/home' element={ <Home /> } />
+
+        <Route path='*' element={ <Navigate to= '/register' /> } />  {/* Fallback route */}
       </Routes>
     </BrowserRouter>
   )
