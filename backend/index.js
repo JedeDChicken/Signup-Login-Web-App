@@ -14,7 +14,7 @@ import dotenv from 'dotenv';
 // import db from './db/connection.js';
 // import routes from './routes/routes.js';
 import connectDB from './connection.js';
-import connectDB from './routes.js';
+import routes from './routes.js';
 
 dotenv.config();
 const PORT = process.env.PORT || 3001;
