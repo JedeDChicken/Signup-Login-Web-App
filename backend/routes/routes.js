@@ -1,7 +1,7 @@
 import express from 'express';
 
 import db from '../api/connection.js';
-import AuthModel from '../models/auth.js';
+import AuthModel from '../api/auth.js';
 import bcryptjs from 'bcryptjs';  // For hashing...
 
 const router = express.Router();

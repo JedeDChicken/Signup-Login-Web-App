@@ -34,14 +34,14 @@ app.use(cors(
 // mongoose.connect('<my_api>');
 app.get('/', (req, res) => {
     res.json("Hello");
-})
+});
 
 // mongoose.connect('mongodb://localhost:...')
 // mongoose.connect('mongodb://<ip addr>:.../<db name>')
 
-app.listen(3001, () => {
+app.listen(PORT, () => {
     console.log(`Server is running and is listening at port ${PORT}`);
-})
+});
 
 // Try Joi or express-validator to validate user input
 // bcryptjs instead of bcrypt- for Vercel
