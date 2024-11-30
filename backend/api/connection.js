@@ -3,7 +3,7 @@ import mongoose from 'mongoose';  // Use Mongoose instead of MongoClient directl
 import dotenv from 'dotenv';
 
 dotenv.config();
-const isConnected = false;  // Flag
+var isConnected = false;  // Flag
 // const uri = process.env.MONGO_URI;  //Add the db name to URI (auth_db)...
 
 // Create MongoClient with MongoClientOptions object to set Stable API ver
