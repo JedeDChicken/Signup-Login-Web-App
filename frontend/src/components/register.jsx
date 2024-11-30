@@ -21,8 +21,8 @@ function Register() {  // Functional React component
             return;
         }
 
-        // axios.post('http://localhost:3001/register', { name, email, pass })
-        axios.post('https://login-jede.vercel.app/register', { name, email, pass })
+        axios.post('http://localhost:3001/register', { name, email, pass })
+        // axios.post('https://login-jede.vercel.app/register', { name, email, pass })
         .then(result => { console.log(result)
             if (result.data === 'Success!') {
                 console.log(result.data);
