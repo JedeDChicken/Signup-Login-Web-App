@@ -23,20 +23,23 @@ const app = express();
 connectDB();  // Connect to db before starting server
 
 app.use(express.json());  // Transform to json format
-app.use(cors(
-    {
-        origin: ['https://jede-login.vercel.app', 
-            'https://jede-login.vercel.app/register', 
-            'https://jede-login.vercel.app/login', 
-            'https://jede-login-backend.vercel.app', 
-            'https://jede-login-backend.vercel.app/register', 
-            'https://jede-login-backend.vercel.app/login', 
-            'http://localhost:5173'
-        ],  // To allow URL...
-        methods: ['POST', 'GET'], 
-        credentials: true
-    }
-));
+
+const corsOptions = {
+    origin: ['https://jede-login.vercel.app', 
+        'https://jede-login.vercel.app/register', 
+        'https://jede-login.vercel.app/login', 
+        'https://jede-login-backend.vercel.app', 
+        'https://jede-login-backend.vercel.app/register', 
+        'https://jede-login-backend.vercel.app/login', 
+        'http://localhost:5173', 
+        'http://localhost:5173/register'
+    ],  // To allow URL...
+    methods: ['POST', 'GET'], 
+    credentials: true, 
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+}
+app.use(cors(corsOptions));
 app.use(routes);
 
 // mongoose.connect('<my_api>');
