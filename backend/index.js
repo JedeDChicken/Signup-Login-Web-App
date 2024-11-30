@@ -25,15 +25,16 @@ connectDB();  // Connect to db before starting server
 app.use(express.json());  // Transform to json format
 
 const corsOptions = {
-    origin: ['https://jede-login.vercel.app', 
-        'https://jede-login.vercel.app/register', 
-        'https://jede-login.vercel.app/login', 
-        'https://jede-login-backend.vercel.app', 
-        'https://jede-login-backend.vercel.app/register', 
-        'https://jede-login-backend.vercel.app/login', 
-        'http://localhost:5173', 
-        'http://localhost:5173/register'
-    ],  // To allow URL...
+    // origin: ['https://jede-login.vercel.app', 
+    //     'https://jede-login.vercel.app/register', 
+    //     'https://jede-login.vercel.app/login', 
+    //     'https://jede-login-backend.vercel.app', 
+    //     'https://jede-login-backend.vercel.app/register', 
+    //     'https://jede-login-backend.vercel.app/login', 
+    //     'http://localhost:5173', 
+    //     'http://localhost:5173/register'
+    // ],  // To allow URL...
+    origin: true, 
     methods: ['POST', 'GET'], 
     credentials: true, 
     preflightContinue: false,
