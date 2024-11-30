@@ -12,14 +12,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 // import db from './db/connection.js';
-// import connectDB from './connection.js';
+import connectDB from './connection.js';
 // import routes from './routes/routes.js';
 
 dotenv.config();
 const PORT = process.env.PORT || 3001;
 const app = express();
 
-// connectDB();  // Connect to db before starting server
+connectDB();  // Connect to db before starting server
 
 app.use(express.json());  // Transform to json format
 app.use(cors(
@@ -31,7 +31,7 @@ app.use(cors(
 ));
 // app.use(routes);
 
-mongoose.connect('mongodb+srv://daniellecastor071:rWsAVWfL0LxOC90o@cluster0.dsaxn.mongodb.net/auth_db?retryWrites=true&w=majority&appName=Cluster0');
+// mongoose.connect('<my_api>');
 app.get('/', (req, res) => {
     res.json("Hello");
 });
