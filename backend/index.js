@@ -19,11 +19,11 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(express.json());  // Transform to json format
 app.use(cors(
-    // {
-    //     origin: '*',  // To allow URL...
-    //     methods: ['POST', 'GET'], 
-    //     credentials: true
-    // }
+    {
+        origin: 'https://login-jede.vercel.app/',  // To allow URL...
+        methods: ['POST', 'GET'], 
+        credentials: true
+    }
 ));
 // app.use(routes);
 
