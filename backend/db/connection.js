@@ -17,10 +17,11 @@ const uri = process.env.MONGO_URI;  //Add the db name to URI (auth_db)...
 // Connect to MongoDB w/ Mongoose
 try {
     // Connect client to server	(optional starting in v4.7)
-    await mongoose.connect(uri, {
-      useNewUrlParser: true,  // Recommended for connection strings
-      useUnifiedTopology: true  // Modern connection management
-    });
+    // await mongoose.connect(uri, {  // Deprecated
+    //   useNewUrlParser: true,  // Recommended for connection strings
+    //   useUnifiedTopology: true  // Modern connection management
+    // });
+    await mongoose.connect(uri);
     console.log('Connected to MongoDB');
 }
 catch(err) {
