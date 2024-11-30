@@ -1,6 +1,6 @@
 import express from 'express';
 
-import db from '../db/connection.js';
+import db from '../api/connection.js';
 import AuthModel from '../models/auth.js';
 import bcryptjs from 'bcryptjs';  // For hashing...
 
