@@ -19,8 +19,8 @@ function Login() {  // Functional React component
             return;
         }
 
-        axios.post('http://localhost:3001/login', { email, pass })
-        // axios.post('https://jede-login-backend.vercel.app/login', { email, pass })
+        // axios.post('http://localhost:3001/login', { email, pass })
+        axios.post('https://jede-login-backend.vercel.app/login', { email, pass })
         .then(result => {
             if (result.data === 'Success!') {
                 console.log(result.data);
