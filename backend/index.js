@@ -25,7 +25,11 @@ app.use(cors(
     //     credentials: true
     // }
 ));
-app.use(routes);
+// app.use(routes);
+
+app.get('/', (req, res) => {
+    res.json("Hello");
+})
 
 // mongoose.connect('mongodb://localhost:...')
 // mongoose.connect('mongodb://<ip addr>:.../<db name>')
