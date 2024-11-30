@@ -31,7 +31,7 @@ app.use(cors(
 ));
 // app.use(routes);
 
-mongoose.connect('<my_api>');
+// mongoose.connect('<my_api>');
 
 app.get('/', (req, res) => {
     res.json("Hello");
