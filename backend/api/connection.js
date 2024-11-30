@@ -3,6 +3,7 @@ import mongoose from 'mongoose';  // Use Mongoose instead of MongoClient directl
 import dotenv from 'dotenv';
 
 dotenv.config();
+const isConnected = false;  // Flag
 // const uri = process.env.MONGO_URI;  //Add the db name to URI (auth_db)...
 
 // Create MongoClient with MongoClientOptions object to set Stable API ver
@@ -17,6 +18,11 @@ dotenv.config();
 // Connect to MongoDB w/ Mongoose
 // Put in function for Vercel...
 const connectDB = async () => {
+  if (isConnected) {
+    console.log('Already connected to MongoDB');
+    return;
+  }
+
   try {
     // Connect client to server	(optional starting in v4.7)
     // await mongoose.connect(uri, {  // Deprecated
@@ -24,6 +30,7 @@ const connectDB = async () => {
     //   useUnifiedTopology: true  // Modern connection management
     // });
     await mongoose.connect(process.env.MONGO_URI);
+    isConnected = true;
     console.log('Connected to MongoDB');
   }
   catch(err) {
