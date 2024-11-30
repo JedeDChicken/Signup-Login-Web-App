@@ -11,7 +11,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 
-import db from './db/connection.js';
+// import db from './db/connection.js';
 // import routes from './routes/routes.js';
 
 dotenv.config();
@@ -26,6 +26,8 @@ app.use(cors(
     }
 ));
 // app.use(routes);
+
+mongoose.connect('mongodb+srv://daniellecastor071:rWsAVWfL0LxOC90o@cluster0.dsaxn.mongodb.net/auth_db?retryWrites=true&w=majority&appName=Cluster0');
 
 app.get('/', (req, res) => {
     res.json("Hello");
