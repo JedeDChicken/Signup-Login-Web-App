@@ -6,9 +6,9 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'  // For design
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-import Register from './components/register.jsx'
-import Login from './components/login.jsx'
-import Home from './components/home.jsx'
+import Register from './register.jsx'
+import Login from './login.jsx'
+import Home from './home.jsx'
 
 function App() {
   // const [count, setCount] = useState(0)
