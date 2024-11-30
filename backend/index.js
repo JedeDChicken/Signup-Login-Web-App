@@ -12,7 +12,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 
 import db from './db/connection.js';
-import routes from './routes/routes.js';
+// import routes from './routes/routes.js';
 
 dotenv.config();
 const PORT = process.env.PORT || 3001;
