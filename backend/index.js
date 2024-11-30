@@ -25,7 +25,7 @@ connectDB();  // Connect to db before starting server
 app.use(express.json());  // Transform to json format
 app.use(cors(
     {
-        origin: 'https://login-jede.vercel.app/',  // To allow URL...
+        origin: 'https://jede-login.vercel.app',  // To allow URL...
         methods: ['POST', 'GET'], 
         credentials: true
     }
