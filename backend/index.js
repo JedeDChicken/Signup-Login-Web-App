@@ -35,10 +35,20 @@ const corsOptions = {
     //     'http://localhost:5173/register'
     // ],  // To allow URL...
     origin: '*', 
-    methods: ['POST', 'GET'], 
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'], 
+    allowedHeaders: ['X-CSRF-Token', 
+        'X-Requested-With', 
+        'Accept', 
+        'Accept-Version', 
+        'Content-Length', 
+        'Content-MD5', 
+        'Content-Type', 
+        'Date', 
+        'X-Api-Version'
+    ], 
     credentials: true, 
-    // preflightContinue: false,
-    // optionsSuccessStatus: 204
+    preflightContinue: false,
+    optionsSuccessStatus: 204
 }
 app.use(cors(corsOptions));
 // app.use(cors());
