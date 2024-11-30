@@ -30,7 +30,8 @@ app.use(cors(
             'https://jede-login.vercel.app/login', 
             'https://jede-login-backend.vercel.app', 
             'https://jede-login-backend.vercel.app/register', 
-            'https://jede-login-backend.vercel.app/login'
+            'https://jede-login-backend.vercel.app/login', 
+            'http://localhost:5173'
         ],  // To allow URL...
         methods: ['POST', 'GET'], 
         credentials: true
