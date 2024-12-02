@@ -3,6 +3,8 @@
 *Check it out here- https://jede-story-generator.vercel.app/
 
 *To Dos- 
-1. Token-based authentication, protect the /home route
-2. Input validation
-3. Password visibility toggle
+1. Integrate w/ Story Generator app
+2. Token-based authentication, protect the /home route
+3. Input validation
+4. Password visibility toggle
+5. Media Query- currently only designed for desktop
