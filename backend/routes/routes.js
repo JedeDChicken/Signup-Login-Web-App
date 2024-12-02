@@ -6,9 +6,9 @@ import bcryptjs from 'bcryptjs';  // For hashing...
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.json("Hello");
-})
+// router.get('/', (req, res) => {
+//     res.json("Hello");
+// })
 
 router.post('/login', async (req, res) => {
     const { email, pass } = req.body;
