@@ -1,6 +1,6 @@
 # Signup/Login Web App with Hashing
 
-*Check it out here- https://jede-story-generator.vercel.app/
+*Check it out here- https://jede-login.vercel.app/
 
 *To Dos- 
 1. Integrate w/ Story Generator app
