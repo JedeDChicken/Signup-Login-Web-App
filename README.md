@@ -1,5 +1,7 @@
 # Signup/Login Web App with Hashing
 
+*This web app allows users to register with their chosen Name, Email, and Password, as well as to login using them. The web app features hashing for enhanced security.
+
 *Check it out here- https://jede-login.vercel.app/
 
 *To Dos- 
